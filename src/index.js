@@ -24,23 +24,29 @@ import Navbar from './components/navbar.jsx';
 import Intro from './components/intro.jsx';
 import About from './components/about.jsx';
 import Portfolio from './components/portfolio.jsx';
+import Experience from './components/experience';
 import Contact from './components/contact.jsx';
 import BackToTop from './components/back-top.jsx';
 import Preloader from './components/preloader';
+import resumeExperience from './resume_experience.json'
 
 
 
 ReactDOM.render(
-    <React.Fragment>
-        <Navbar />
-        <Intro />
-        <About />
-        <Portfolio />
-        <Contact />
-        <BackToTop />
-        <Preloader />
-    </React.Fragment>,
-document.getElementById('root'));
+  <React.Fragment>
+    <Navbar />
+    <Intro />
+    <About />
+    <Experience
+      resumeExperience={resumeExperience.experience}
+      resumeBasicInfo={resumeExperience.basic_info}
+    />
+    {/* <Portfolio /> */}
+    <Contact />
+    <BackToTop />
+    <Preloader />
+  </React.Fragment>,
+  document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

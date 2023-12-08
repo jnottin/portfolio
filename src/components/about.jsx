@@ -6,56 +6,84 @@ class About extends React.Component {
     super();
     this.state = {
       skills: [
-        { id: "HTML5_skill", content: "HTML5", porcentage: "80%", value: "80" },
-        { id: "CSS3_skill", content: "CSS3", porcentage: "75%", value: "75" },
+        {
+          id: "Amazon_web_services_skill",
+          content: "Amazon Web Services",
+          percentage: "85%",
+          value: "85",
+          color: "#2fa499"
+        },
+        {
+          id: "Kubernetes_skill",
+          content: "Kubernetes",
+          percentage: "80%",
+          value: "80",
+          color: "#2c98f0"
+        },
+        {
+          id: "Terraform_skill",
+          content: "Terraform",
+          percentage: "85%",
+          value: "85",
+          color: "#ec5453"
+        },
+        {
+          id: "Docker_skill",
+          content: "Docker",
+          percentage: "75%",
+          value: "75",
+          color: "#24b67e"
+        },
+        { id: "Node_skill", content: "Node", percentage: "100%", value: "100a", color: "#f9bf3f" },
+        { id: "ExpressJS_skill", content: "ExpressJS", percentage: "95%", value: "95", color: "#2fa499" },
         {
           id: "JavaScript_skill",
-          content: "JavaScript",
-          porcentage: "90%",
-          value: "90"
+          content: "JavaScript/ES6",
+          percentage: "100%",
+          value: "100",
+          color: "#ec5453"
         },
-        { id: "PHP_skill", content: "PHP", porcentage: "70%", value: "70" },
+        { id: "TypeScript_skill", content: "TypeScript", percentage: "75%", value: "75", color: "#a84cb8" },
         {
           id: "ReactJS_skill",
           content: "ReactJS",
-          porcentage: "80%",
-          value: "80"
+          percentage: "80%",
+          value: "80",
+          color: "#2c98f0"
+        },
+        { id: "Python_skill", content: "Python", percentage: "70%", value: "70", color: "#a84cb8" },
+        {
+          id: "Github_workflows_skill",
+          content: "Github Workflows",
+          percentage: "80%",
+          value: "80",
+          color: "#24b67e"
         },
         {
-          id: "Python_skill",
-          content: "Python",
-          porcentage: "75%",
-          value: "75"
-        },
-        {
-          id: "VanillaJS_skill",
-          content: "VanillaJS",
-          porcentage: "85%",
-          value: "85"
-        },
-        {
-          id: "Wordpress_skill",
-          content: "Wordpress",
-          porcentage: "80%",
-          value: "80"
+          id: "Java_skill",
+          content: "Java",
+          percentage: "60%",
+          value: "60",
+          color: "#f9bf3f"
         }
       ],
       about_me: [
         {
           id: "first-p-about",
           content:
-            "Lorem ipsum pariatur consectetur laboris occaecat nulla aliqua irure ad deserunt duis. Eiusmod nulla cupidatat labore sint sit aute dolore irure nostrud ut incididunt. Anim laborum reprehenderit labore magna ut dolore quis irure. Labore ea duis deserunt ullamco irure fugiat deserunt ut nisi ea minim proident. Nisi consectetur do non magna duis aliqua minim minim veniam. In occaecat minim qui consequat elit mollit consectetur non id tempor. Amet adipisicing occaecat tempor culpa quis est duis."
+            "As a software engineer with a background in program management and data analysis, I bring a methodical but creative approach to solving problems."
         },
         {
           id: "second-p-about",
           content:
-            "Lorem ipsum pariatur consectetur laboris occaecat nulla aliqua irure ad deserunt duis. Eiusmod nulla cupidatat labore sint sit aute dolore irure nostrud ut incididunt. Anim laborum reprehenderit labore magna ut dolore quis irure. Labore ea duis deserunt ullamco irure fugiat deserunt ut nisi ea minim proident. Nisi consectetur do non magna duis aliqua minim minim veniam. In occaecat minim qui consequat elit mollit consectetur non id tempor. Amet adipisicing occaecat tempor culpa quis est duis."
+            "I have a passion for dreaming and learning about new technologies that can be built to impact the world."
         },
         {
           id: "third-p-about",
           content:
-            "Lorem ipsum pariatur consectetur laboris occaecat nulla aliqua irure ad deserunt duis. Eiusmod nulla cupidatat labore sint sit aute dolore irure nostrud ut incididunt. Anim laborum reprehenderit labore magna ut dolore quis irure. Labore ea duis deserunt ullamco irure fugiat deserunt ut nisi ea minim proident. Nisi consectetur do non magna duis aliqua minim minim veniam. In occaecat minim qui consequat elit mollit consectetur non id tempor. Amet adipisicing occaecat tempor culpa quis est duis."
-        }
+            "I have been a Tech Lead, Program Manager and Individual Contributor and whether as a team member or on my own, I thrive on taking those dreams and bringing them to life."
+        },
+
       ]
     };
   }
@@ -69,47 +97,6 @@ class About extends React.Component {
               <div className="box-shadow-full">
                 <div className="row">
                   <div className="col-md-6">
-                    <div className="row">
-                      <div
-                        className="col-sm-6 col-md-5"
-                        style={{ margin: "0 auto" }}
-                      >
-                        <div
-                          className="about-img"
-                          style={{ textAlign: "center" }}
-                        >
-                          <img
-                            className="img-fluid rounded b-shadow-a"
-                            alt=""
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="skill-mf">
-                      {/* <p className="title-s">Skill</p> */}
-                      {this.state.skills.map(skill => {
-                        return (
-                          <React.Fragment key={skill.id}>
-                            <span>{skill.content}</span>{" "}
-                            <span className="pull-right">
-                              {skill.porcentage}
-                            </span>
-                            <div className="progress">
-                              <div
-                                className="progress-bar"
-                                role="progressbar"
-                                style={{ width: skill.porcentage }}
-                                aria-valuenow={skill.value}
-                                aria-valuemin="0"
-                                aria-valuemax="100"
-                              ></div>
-                            </div>
-                          </React.Fragment>
-                        );
-                      })}
-                    </div>
-                  </div>
-                  <div className="col-md-6">
                     <div className="about-me pt-4 pt-md-0">
                       <div className="title-box-2">
                         <h5 className="title-left">About Me</h5>
@@ -119,6 +106,36 @@ class About extends React.Component {
                           <p className="lead" key={content.id}>
                             {content.content}
                           </p>
+                        );
+                      })}
+                    </div>
+                  </div>
+                  <div className="col-md-6">
+                    <div className="row">
+                    </div>
+                    <div className="skill-mf">
+                      <div className="title-box-2">
+                        <h5 className="title-left">Skillz</h5>
+                      </div>
+                      <p className="lead">In my mind, programming skills should be considered on a sliding scale of understanding. Below are what I consider my strengths and how I gauge them.</p>
+                      {this.state.skills.map(skill => {
+                        return (
+                          <React.Fragment key={skill.id}>
+                            <span>{skill.content}</span>{" "}
+                            <span className="pull-right">
+                              {skill.percentage}
+                            </span>
+                            <div className="progress">
+                              <div
+                                className="progress-bar"
+                                role="progressbar"
+                                style={{ width: skill.percentage, backgroundColor: skill.color }}
+                                aria-valuenow={skill.value}
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                              ></div>
+                            </div>
+                          </React.Fragment>
                         );
                       })}
                     </div>

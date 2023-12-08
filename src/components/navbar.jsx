@@ -1,8 +1,8 @@
 import React from "react";
 import $ from "jquery";
 
-import logo1 from "../img/male1.png";
-import logo2 from "../img/male.png";
+import logo1 from "../img/profile_color.png";
+import logo2 from "../img/profile_blackwhite.png";
 
 class Navbar extends React.Component {
   constructor() {
@@ -16,7 +16,7 @@ class Navbar extends React.Component {
     const nav = $("nav");
     let navHeight = nav.outerHeight();
 
-    $(".navbar-toggler").on("click", function() {
+    $(".navbar-toggler").on("click", function () {
       if (!$("#mainNav").hasClass("navbar-reduce")) {
         $("#mainNav").addClass("navbar-reduce");
       }
@@ -27,7 +27,7 @@ class Navbar extends React.Component {
       offset: navHeight
     });
 
-    $(".js-scroll").on("click", function() {
+    $(".js-scroll").on("click", function () {
       $(".navbar-collapse").collapse("hide");
     });
 
@@ -51,10 +51,10 @@ class Navbar extends React.Component {
       }
     });
 
-    $('a.js-scroll[href*="#"]:not([href="#"])').on("click", function() {
+    $('a.js-scroll[href*="#"]:not([href="#"])').on("click", function () {
       if (
         window.location.pathname.replace(/^\//, "") ===
-          this.pathname.replace(/^\//, "") &&
+        this.pathname.replace(/^\//, "") &&
         window.location.hostname === this.hostname
       ) {
         var target = $(this.hash);
@@ -74,7 +74,7 @@ class Navbar extends React.Component {
       }
     });
 
-    $(".js-scroll").on("click", function() {
+    $(".js-scroll").on("click", function () {
       $(".navbar-collapse").collapse("hide");
     });
   }
@@ -122,10 +122,15 @@ class Navbar extends React.Component {
                 </a>
               </li>
               <li className="nav-item">
+                <a className="nav-link js-scroll" href="#experience">
+                  Experience
+                </a>
+              </li>
+              {/* <li className="nav-item">
                 <a className="nav-link js-scroll" href="#work">
                   Work
                 </a>
-              </li>
+              </li> */}
               <li className="nav-item">
                 <a className="nav-link js-scroll" href="#contact">
                   Contact
