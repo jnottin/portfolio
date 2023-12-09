@@ -3,7 +3,10 @@
 My portfolio is a mobile-responsive built with React, ReactStrap, JavaScript, and CSS. I provide a bit about me, my experience and ways to contact me. Hope you enjoy!
 
 ## Deployed
-[Here](https://jnottin.github.io/new_portfolio/)
+Through GH pages, housed [here](https://jnottin.github.io/new_portfolio/)
+
+![alt text](https://github.com/jnottin/new_portfolio/blob/main/portfolio_image.png?raw=true)
+
 
 ## Getting Started
 
